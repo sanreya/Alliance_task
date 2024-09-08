@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #002244;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+a{
+    text-decoration: none ;
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.logo {
+    width: 300px;
+    height: auto;  
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.academic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.academic-item {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero {
+    position: relative;
+    background-color: #990000;
+    color: white;
+    text-align: center;
+    height: auto;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;  
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden; 
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.8s ease;  
+    width: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;  
+    height: auto;  
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: relative;
+    top: -50px;
+}
+
+/* Navigation buttons */
+.carousel button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+.carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.intro {
+    background-color: #f9f9f9;
+    padding: 100px 100px;
+    text-align: center;
+}
+
+.intro .left{
+    text-align: right;
+    float:left;
+    width: 30%;
+}
+
+.intro .left h1 {
+    font-size:xx-large;
+}
+
+.intro .left p{
+    color: #535353;
+}
+
+.intro .stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.stats{
+    padding-left: 100px;
+}
+
+.stats-table {
+    text-align: justify;
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are collapsed into a single line */
+}
+
+.stats-table tr {
+    border-bottom: 1px solid #ccc; /* Adds a bottom border to each row */
+}
+
+.stats-table tr:last-child {
+    border-bottom: none; /* Remove border from the last row to avoid an extra line at the bottom */
+}
+
+.stats-table tr:first-child td{
+    padding-top: 0px;
+}
+
+.stats-table td{
+    width: 40%;
+    padding: 40px 40px 40px 40px;
+}
+
+
+.academics {
+    background-color: #fff;
+    text-align: center;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    border: none; 
+    border-left: 5px solid maroon;
+    border-radius: 0; 
+    overflow: hidden;
+}
+.card-img-top {
+    width: 100%; /* Ensure image covers the width of the card */
+    transition: transform 0.5s ease; /* Smooth transition for image on hover */
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 0, 0, 0.7); /* Maroon transparent background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for overlay */
+    transform: translateY(-100%); /* Initially hide the overlay above the card */
+}
+.card:hover .card-overlay {
+    opacity: 1;
+    transform: translateY(0); /* Show overlay and slide it up */
+}
+.card-overlay a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    margin: 10px 0; 
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-body {
+    flex: 1; /* Allow card body to grow and fill available space */
+    padding: 20px;
+}
+
+footer {
+    background-color: #002244;
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-section h4 {
+    margin-bottom: 20px;
+}
